@@ -7,7 +7,11 @@ dotenv.config();
 
 const port = process.env.PORT || 3000;
 const localhost = process.env.LOCALHOST || 'http://localhost:';
-console.log(port);
+// console.log(port);
+
+app.get('/', (req, res) => {
+  res.send('รัน Express  สำเร็จแล้ว!');``
+});
 
 app.listen(port, () => {
     console.log(`Server is running at ${localhost}${port}`)
